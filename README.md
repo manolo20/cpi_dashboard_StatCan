@@ -15,8 +15,8 @@ For more details on the app, please contact the authors:
 | Liam Peet-Pare | l.peetpare@gmail.com     |    
 
 <br><br>
-Special thanks to :clap: Dragos Ifrim :clap: for his ongoing leadership and support during this project and to the R open source community :+1:.
+Special thanks to :clap: *Dragos Ifrim* :clap: for his ongoing leadership and support during this project and to the R open source community :+1:.
 
 
 <br><br>
-It is also worth to acknowledge that the calculator idea was taken from Bank of Canada's [inflation calculator](https://www.bankofcanada.ca/rates/related/inflation-calculator/) and that all the data is publicly avaibalable from [Statistics Canada](https://www.statcan.gc.ca/eng/start) 
+It is also worth to acknowledge that the calculator idea was taken from Bank of Canada's [inflation calculator](https://www.bankofcanada.ca/rates/related/inflation-calculator/) and that all the data is publicly avaibalable from the [Statistics Canada](https://www.statcan.gc.ca/eng/start) website.
