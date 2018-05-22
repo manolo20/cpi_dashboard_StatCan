@@ -1,0 +1,223 @@
+---
+#title: "Consumer Price Index"
+#author: "Consumer Price Index"
+#date: "4/2/2018"
+output: html_document
+runtime: shiny
+---
+***
+
+
+
+# Consumer Price Index
+
+***
+
+## Description
+
+<br>
+
+The Consumer Price Index (CPI) is an indicator of changes in consumer prices experienced by Canadians. It is obtained by comparing, over time, the cost of a fixed basket of goods and services purchased by consumers. Since the basket contains goods and services of unchanging or equivalent quantity and quality, the index reflects only pure price change.
+<br><br>
+The CPI is widely used as an indicator of the change in the general level of consumer prices or the rate of inflation. Since the purchasing power of money is affected by changes in prices, the CPI is useful to virtually all Canadians. Consumers can compare movements in the CPI to changes in their personal income to monitor and evaluate changes in their financial situation.
+<br><br>
+The CPI also has a number of specific applications:
+<br><br>
+**(1)** It is used to escalate a given dollar value, over time, to preserve the purchasing power of that value. Thus, the CPI is widely used to adjust contracted payments, such as wages, rents, leases and child or spousal support allowances. Private and public pension programs (Old Age Security and the Canada Pension Plan), personal income tax deductions, and some government social payments are also escalated using the CPI.
+
+**(2)** It is used as a deflator of various economic aggregates, either of income flows, to obtain constant dollar estimates of income, or of expenditure flows, to obtain personal expenditure estimates at constant prices.
+
+**(3)** It is used to set and monitor the implementation of economic policy. The Bank of Canada, for example, uses the CPI, and special aggregates of the CPI, to monitor its monetary policies.
+
+**(4)** Business analysts and economists use the CPI for economic analysis and research on various issues, such as the causes and effects of inflation, and understanding regional disparities in price movements.
+<br><br>
+Price movements of the goods and services represented in the CPI are weighted according to the relative importance of goods and services in the total expenditures of consumers. Each good or service is considered to be an element in a basket representative of consumer spending, and price movements are assigned a basket share with the proportion of total consumption expenditure they account for. For example, Canadians as a whole spend a much larger share of their total expenditures on rent than on milk. As a result, a 10% price increase in rental rates will have a greater impact on the All-items CPI than a 10% increase in the price of milk. The CPI basket shares are updated at two year intervals; the data to specify them are obtained primarily from the Survey of Household Spending [(62-202-X)](http://www.statcan.gc.ca/access_acces/alternative_alternatif.action?teng=62-202-x2008000-eng.pdf&tfra=62-202-x2008000-fra.pdf&l=eng&loc=62-202-x2008000-eng.pdf).
+<br><br>
+Release dates of the CPI for the coming year are published in advance. They can be found in The Daily and in the publication "The Consumer Price Index" [(62-001-X)](http://www5.statcan.gc.ca/olc-cel/olc.action?objId=62-001-X&objType=2&lang=en&limit=0) or at the following [link](https://www.statcan.gc.ca/release-diffusion/2018-eng.pdf) under the Consumer Price Index section.
+<br><br>
+More information about the concepts and use of the CPI are available online in Your Guide to the Consumer Price Index [(62-557-X, free)](http://www.statcan.gc.ca/pub/62-557-x/62-557-x1996001-eng.pdf), also from the "Browse by key resource" module of the website under "Publications".
+<br><br>
+**Reference period:** The time base is the period for which the CPI equals 100; currently this is the year 2002.
+
+***
+
+## Data sources and methodology
+<br><br>
+**Target population**
+
+The universe of goods and services consists of all consumer goods and services that can be associated with a retail price, that is, goods and services for which a price can be associated with a specific quantity and quality. Many public goods and services provided by governments, and for which there is no market price, are excluded since they cannot be associated with a retail price. For example, health services received through the health insurance system are excluded, as are life and disability insurance premiums. However, drugs, medical supplies, dental care, and eye care goods and services purchased by the general population are included, since these goods and services can be associated with retail prices.
+<br><br>
+In establishing the universe of goods and services for the CPI, no effort is made to isolate "luxuries" or "necessities", and none are omitted on moral grounds. For instance, some may regard the use of tobacco and alcohol as undesirable. However, these products are included in the product universe of the CPI because they represent a legitimate and relatively significant expenditure for many Canadians.
+<br><br>
+The geographical universe includes all of Canada, except for Indian reserves. Canadian forces bases overseas are also excluded. The universe of retail outlets includes all locations where consumers make purchases. Finally, prices used in the CPI are final prices paid by consumers, after discounts, but inclusive of excise and sales taxes and any other indirect taxes paid by consumers.
+<br><br>
+The target population of the CPI consists of families and individuals living in urban and rural private households in Canada. People living in collective households, such as members of communal colonies, prison inmates, and chronic care patients in hospitals and nursing homes are excluded from the target population. (Students in higher-education programs living full-time in residence are not considered to be living in collective households and are part of the target population. Students are not part of their parents' households if they live less than 30 days a year with them.) Also excluded are people living on Indian reserves and official representatives of foreign countries and their families. Part-year households - households whose members were part of other households at the beginning of the year, or who have moved to Canada since the beginning of the year - are part of the target population.
+<br><br>
+
+**Instrument design**
+
+Price collectors collect most price data using technical descriptions or specifications for the selected goods and services in the CPI sample. These are referred to as representative products.
+<br><br>
+The specification for a representative product contains:
+<br><br>
+**(1)** a description (e.g., "frozen French fried potatoes, regular, crinkle or shoe string cut");
+
+**(2)** acceptable units of measure;
+
+**(3)** frequency of pricing (e.g., monthly);
+
+**(4)** quality requirements (e.g. "Grade A or Fancy"); and
+
+**(5)** description of acceptable varieties (e.g., "super fries, super chips, dollar chips").
+<br><br>
+Representative products in the price survey may represent larger groups of similar products. Market intelligence and research by CPI product specialists are used to select and define representative products. As much as possible, interviewers track the price of the same products through time. However, a review of sales shares is conducted periodically to ensure that the sample of products continues to be representative. If a product fails to meet sales-share criteria, it is removed from the survey and replaced by another product with higher sales. 
+<br><br>
+
+**Sampling**
+
+This is a sample survey.
+<br><br>
+The CPI price sample is obtained from a selection of geographical areas, representative goods and services, and types and locations of retail outlets, to estimate price changes experienced by Canadians. The timing of price collection during the month is predefined. The extent and quality of the sample is constrained by budgets and the information available on which to base the sampling process.
+<br><br>
+Regular reviews and updates ensure that price changes calculated with samples of products are representative of the price change for the entire class of products. New products are introduced into the pricing samples based on information about their market shares, market and product trends and the expert judgment of product officers. Particular efforts are made to introduce new products into samples for product categories with relatively high rates of change. Outlet sample reviews and updates are performed periodically for many CPI basic classes.
+<br><br>
+There are about 600 goods and services identified to represent the price movement in 175 basic goods and services classes. Sample goods and services are chosen on the basis of representativeness and expected continuous availability.
+<br><br>
+The geographical distribution of the sample varies by product. The most geographically dispersed price samples are for goods and services whose prices are likely to be heavily influenced by local market conditions (e.g., locally determined prices such as rents, water charges, local transit fares, and property taxes). In contrast, prices, such as car registration fees or postage fees, are collected from provincial or national agencies.
+<br><br>
+The selection of outlets is based on market intelligence and is designed primarily to include retail outlets with high sales revenues. Almost all prices are collected from retail outlets or from local, regional or provincial agencies.
+<br><br>
+There are, however, two notable exceptions. Rent quotes are collected from a survey of tenants, sourced from a special rent module attached to the [Labour Force Survey (LFS)](http://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3701). Dwellings are selected for the LFS using a multi-stage probability-based sampling scheme and remain in the sample for six consecutive months. Probability-proportional-to-size sampling is used to select hotels and motels for traveller accommodation.
+<br><br>
+The timing of price collection (e.g., the first week of the month) is predefined to ensure consistency. For some products whose prices are more variable, price collection is spread over several weeks.
+<br><br>
+The All-items CPI, at the Canada level, is based on an annual sample of over 950,000 price quotes.
+<br><br>
+**Data sources**
+
+Responding to this survey is mandatory.
+<br><br>
+Data are collected directly from survey respondents, extracted from administrative files and derived from other Statistics Canada surveys and/or other sources.
+<br><br>
+The price survey collects prices of a large, representative set of consumer goods and services. The frequency of collection of prices of any particular good or service varies depending on the nature of the goods and services.
+<br><br>
+The prices of most of the goods and services surveyed for the CPI are collected monthly, usually in the first two weeks of the reference month, while food prices are collected in the first three weeks.
+<br><br>
+The prices of some goods are observed less frequently than monthly, since their prices tend to change less often. The prices of most food items are observed every month. Bus, train and taxi fares are collected twice a year. University tuition fees, property taxes and automobile registration fees are collected once a year. However, when prices change outside of the scheduled time of collection, a special sample of prices may be collected. Prices of seasonal goods (e.g. winter coats), which appear in the marketplace for only a few months of the year, are only observed in the months in which supplies are judged to be sufficient.
+<br><br>
+Over 90 percent of the price quotes collected by CPI interviewers are obtained by personal visits to selected retail outlets. For products such as newspapers, cable television services, men's haircuts, fuel oil, and restaurant meals, prices are collected by telephone and at least once a year, by personal visits. Some types of information are collected via the Internet. Some data are provided directly by CPI respondents filling out a questionnaire.
+<br><br>
+Price collectors or interviewers in the Regional Offices of Statistics Canada are trained and equipped with hand-held computers containing instructions, technical descriptions of the products to be observed and paper forms for capturing important additional information about key product characteristics.
+<br><br>
+Price survey instructions consist of a sample of representative goods and services whose prices are observed in selected areas of a city or province, in selected retail outlets, on a specified week of the month. Detailed rules and conventions govern price collection. These rules help ensure that the practical aspects of compiling the CPI are consistent and adhere to the underlying concepts and definitions.
+<br><br>
+Estimated percentage shares (by weight in the CPI) of the collection methods used in the construction of the CPI:
+<br><br>
+Computer Assisted Personal Observation 55%
+Data derived from other Statistics Canada programs 15%
+Telephone interviews 10%
+Extraction of data from other sources and questionnaires 20%
+<br><br>
+View the [Questionnaire(s) and reporting guide(s)](http://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvInstrumentList&Id=498102).
+<br><br>
+**Error detection**
+
+During the process of collecting price data, interviewers are asked to provide the reasons for large or unusual price changes. Edit checks are also done on the hand-held computers at the time of data capture. The price information transmitted to Statistics Canada is further reviewed for outliers or unusual changes. A combination of judgment and outlier detection techniques are used to detect errors. In cases where unusual price changes are not explained, follow up investigations are made. Product specialists in the Consumer Prices Division also prepare monthly reports summarizing and explaining price movements for products in the survey.
+<br><br>
+**Imputation**
+
+Imputation is sometimes used in the CPI in instances when no prices are collected. This can happen for several reasons. Firstly, not all goods and services covered in the price survey are collected every month. Among these are seasonal goods which are only available for part of the year (e.g., lawn mowers or snow suits), goods whose prices are relatively stable (e.g., parking fees), and some services whose prices change only once a year (e.g., university tuition fees). Secondly, the prices of some products are not collected in some geographical areas, usually because the quantities available to consumers in those areas are too limited to merit the cost of collecting price data (e.g., fuel oil in Alberta). Thirdly, prices may be imputed in cases where prices are missing in a given month, when they are out of stock or otherwise not available, or because the prices collected are of questionable quality. Finally, adjustments to captured price data are made in cases where the characteristics of a product have changed and this may be affecting its price. This is referred to as quality change, and steps are taken to account for it so that only pure price change is used to calculate the CPI.
+<br><br>
+Seasonal products are products that are only sold at certain times of the year, following a set seasonal pattern (e.g., the Spring or Fall clothing lines). Price movements for seasonal goods in their out-of-season months are obtained from the larger group to which the seasonal goods belong. For goods with relatively stable prices, an assumption of no price change is used in the months for which prices are not collected. Similarly, for goods and services whose prices change once a year, no price change is assumed in non-priced months.
+<br><br>
+In geographical imputations, price movements in other areas are used as source data to substitute for price movements in places where prices are not observable. Imputations are only taken out of province when it is impossible to provide a reliable imputation using prices within the provincial boundaries.
+<br><br>
+To compare prices that relate to different quantities, prices are adjusted to a standard quantity unit. When an item is temporarily out of stock, the last recorded price is retained. If an item is no longer available at a given outlet, the item is replaced by a similar one in the same outlet or, if necessary, in a different outlet.
+<br><br>
+In cases where an explicit adjustment for quality change is impractical, prices are not directly compared. Sometimes a new item is introduced into the sample for which price movements can only be calculated in the following month.
+<br><br>
+For some products (e.g. some household appliances and electronic goods), a mean imputation is used to account for the change in the quality, while hedonic adjustments are used for other products (e.g. Internet access services). The option costing method is also used to account for quality changes, notably for products like the purchase of automobile vehicles and for food purchased from restaurants.
+<br><br>
+**Estimation**
+<br><br>
+Basket Shares
+
+Estimation procedures are used to derive the relative importance of the goods and services in the CPI basket. The main source of expenditure data on consumer goods and services is Statistics Canada's Survey of Household Spending. Average yearly expenditures per household are calculated for each product class by provincial or sub-provincial area. These are then applied to the estimated number of households in each geographical area giving aggregate expenditures for each goods and services class. Aggregate expenditures for Canada are obtained from estimated aggregate expenditures for each basic product group for each geographical unit.
+<br><br>
+Indexes
+
+A step-by-step approach is used to calculate the fixed-basket consumer price indexes for any aggregate above the basic class level. Firstly, indexes for basic classes - in which cases price movements are measured as the ratio of their prices in an observed period to their prices in the base period- are combined (averaged) into the next-level composite indexes, these in turn into higher-level indexes, etc., up to the level of "All-items CPI". Ultimately, though, every composite index is a weighted arithmetic average of the corresponding price indexes for all of the basic classes contained in the given aggregate. Since the CPI weighting structure is based on a rectangular grid with goods and services as rows and regions as columns, the same All-items CPI at the Canada level is derived as an aggregate of regional All-items CPIs, or as an aggregate of Canada-level basic class indexes.
+<br><br>
+**Quality evaluation**
+
+Generally, the factors affecting the quality of the CPI include:
+- the size and composition of the price samples of goods and services and outlets;
+- the accuracy of the expenditure estimates used to assign weights;
+- the frequency and speed of updating of the contents and weights of the CPI basket;
+- the effectiveness of error detection and correction, and imputation methods for missing data; and
+- the application of appropriate methods of adjusting for quality change of goods and services in the CPI sample.
+
+The quality of this index is maintained through the expertise of the analysts assigned to it. They develop a thorough knowledge of the domain, which is supplemented by outside personal contacts for particular goods or services. Much time and effort is devoted to detecting and following up on unusual fluctuations over time in the pricing patterns of goods and services. Prior to dissemination, the price indexes are analyzed and historic trends reviewed.
+<br><br>
+**Disclosure control**
+
+Statistics Canada is prohibited by law from releasing any information it collects which could identify any person, business, or organization, unless consent has been given by the respondent or as permitted by the Statistics Act. Various confidentiality rules are applied to all data that are released or published to prevent the publication or disclosure of any information deemed confidential. If necessary, data are suppressed to prevent direct or residual disclosure of identifiable data.
+<br><br>
+Collected data are converted to price indexes and data are released as such, so that it is not possible to identify the suppliers of the original raw price information. In addition, when average prices are published at the national level for a specific group of products, it is not possible to identify the outlets which supplied data.
+<br><br>
+
+**Revisions and seasonal adjustment**
+
+Seasonal adjustment
+
+A seasonally adjusted series is one from which seasonal movements have been eliminated. Seasonal movements are defined as those which are caused by regular annual events such as variations in climate and regular institutional events such as vacations and statutory holidays. Seasonally adjusted series are calculated using the statistical program X-12-ARIMA. Time series with no identifiable seasonal pattern remain unchanged from the official series.
+<br><br>
+Currently for the CPI, 13 series are produced on a seasonally adjusted basis at the national level. These are:
+- the All-items CPI;
+- the eight major component indexes; and
+- four special aggregates: (1) All-items excluding eight of the most volatile components as defined by the Bank of Canada and excluding the effect of changes in indirect taxes, (2) All-items excluding eight of the most volatile components as defined by the Bank of Canada, (3) All-items excluding food, (4) All-items excluding food and energy.
+
+
+The current seasonal adjustment process in place is such that each series is adjusted directly, and thus, are not the result of aggregating their seasonally adjusted sub-components.
+<br><br>
+Data users employing the CPI for indexation purposes are advised not to use seasonally adjusted series. There are two reasons for this. First, revisions of seasonally adjusted data can lead to changes in both levels and movements of the indexes. Second, seasonal adjustment is a sophisticated statistical data treatment undertaken to isolate price trends and irregular shocks in the economy and indexes which have been seasonally adjusted do not necessarily represent actual changes in consumer prices.
+<br><br>
+Revisions to non-seasonally adjusted series
+
+The non-seasonally adjusted series of the CPI are never revised. From time to time, the base period of the CPI may be updated. The official time base was changed from 1992=100 to 2002=100 starting with the CPI for May 2007. The change is strictly an arithmetic conversion, which alters the index levels, but leaves the percentage changes between any two periods intact, except for differences in rounding.
+<br><br>
+Revisions to seasonally adjusted series
+
+The seasonally adjusted indexes are the only CPI series open to revisions. Each month, the previous month's seasonally adjusted index is subject to revision. The seasonally adjusted values for the last three years are revised with every January data release. At the same time, the models used to obtain seasonally adjusted data and their parameters are reviewed and updated when necessary. 
+
+***
+
+## Data accuracy
+
+Statistical reliability is inherently more difficult to assess for price indexes than for other statistical series due to the complex nature of composite price change and the statistical problems of estimating composite price change.
+<br><br>
+The quality of the CPI depends on many factors related to price and consumer expenditure. Data for both price change and consumer expenditure patterns are obtained from sample surveys and therefore are subject to sampling error. Generally, the accuracy of price data is more important to overall quality of the CPI than the accuracy of expenditure data used for weights.
+<br><br>
+Sampling error for the CPI price surveys is difficult to quantify because, except for rents and traveller accommodation, product and outlet samples are based on judgmental rather than probability sampling methods.
+<br><br>
+Several studies related to aspects of data quality for the CPI are available. All of these papers are available free in ["Analytical series - Prices Division", Statistics Canada, catalogue no. 62F0014M](http://www5.statcan.gc.ca/olc-cel/olc.action?objId=62F0014M&objType=2&lang=en&limit=0).
+<br><br>
+As well, the report from an assessment of data quality of the Canadian CPI performed by the International Monetary Fund in 2003 is available on this [link](http://www.imf.org/external/pubs/ft/scr/2003/cr03328.pdf).
+<br><br>
+In summary, for each of the 15 applicable elements assessed, the CPI was rated at the highest of a four-level data quality assessment grid.
+<br><br>
+The CPI is believed to be sufficiently accurate for most practical purposes. Accuracy is best at higher levels of geographic and product aggregation due to the larger sizes of the price samples for high levels of aggregation. As well, since errors can occur in price collection and editing, or in making quality adjustments to estimate "pure price change", higher level aggregate indexes are likely to be of better quality than lower level indexes because any distortions due to errors are more likely to cancel out. In general, accuracy is better at the Canada level for any product index in the CPI, compared to the same index at the province or city level. Also, accuracy is better at the All-items CPI or major component levels of the CPI, compared to individual product indexes. Finally, the CPI is more accurate as an indicator of change over several months or a year, compared to the accuracy of the price change measured from any one month to the next. 
+
+***
+
+## Sources used in this application
+<br>
+[Table 326-0020 - Consumer Price Index (CPI) monthly (2002=100)](http://www5.statcan.gc.ca/cansim/a26?lang=eng&id=3260020)
+
+[Table 326-0021 - Consumer Price Index (CPI) monthly (2002=100)](http://www5.statcan.gc.ca/cansim/a26?lang=eng&id=3260021)
+
+[Table 326-0022 - Consumer Price Index (CPI) monthly (2002=100)](http://www5.statcan.gc.ca/cansim/a26?lang=eng&id=3260022)
+
+[Table 326-0023 - Consumer Price Index (CPI) statistics, measures of core inflation and other related statistics - Bank of Canada definitions, monthly](http://www5.statcan.gc.ca/cansim/a26?lang=eng&id=3260023)
+
+[Table 326-0031 - Basket Weights of the Consumer Price Index (CPI) occasional (percent)](http://www5.statcan.gc.ca/cansim/a26?lang=eng&id=3260031)
