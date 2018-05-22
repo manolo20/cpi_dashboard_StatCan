@@ -1,4 +1,5 @@
 library(shinydashboard)
+<<<<<<< HEAD
 library(dplyr)
 library(DT)
 #library(openxlsx)
@@ -6,6 +7,13 @@ library(plotly)
 library(ggplot2)
 
 setwd("/home/atai/Downloads/CPI dashboard/CPI")
+=======
+library(tidyverse)
+library(DT)
+library(openxlsx)
+
+setwd("/home/atai/Downloads/CPI dashboard/Prototype_1")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
 #datafiles <- readRDS("./data/choices.rda")
 datafiles <- readRDS("./data/choices.RDS")
 cpi <- readRDS("./data/cpi.RDS")
@@ -30,9 +38,22 @@ sidebar <- dashboardSidebar(
 
 
 body <- dashboardBody(
+<<<<<<< HEAD
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css",
               href = "custom.css")
+=======
+  tags$head(tags$style(HTML('
+      .skin-blue .main-sidebar {
+        background-color: #696969;
+      }
+      .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li:hover>a {
+        background-color: #00008B;
+      }
+    '))
+    # tags$link(rel = "stylesheet", type = "text/css",
+    #           href = "custom.css")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
   ),
   tabItems(
     tabItem(tabName = 'calculator',
@@ -102,12 +123,21 @@ body <- dashboardBody(
               sidebarLayout(
                 sidebarPanel(
                   selectInput('item2', 'CPI item(s)',
+<<<<<<< HEAD
                               choices = unique(weights$Item),
                               selected = 'Food', multiple = FALSE),
                   
                   selectInput('geo2', 'Region(s)',
                               choices = unique(weights$Region),
                               selected = 'CAN', multiple = TRUE),
+=======
+                              choices = unique(weights$item),
+                              selected = 'Meat', multiple = FALSE),
+                  
+                  selectInput('geo2', 'Region(s)',
+                              choices = unique(weights$geo),
+                              selected = 'Canada', multiple = TRUE),
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                   
                   selectInput("showTable2", "Show Data As:",
                               choices = list("Chart", "Table", "Both"),
@@ -116,17 +146,25 @@ body <- dashboardBody(
                 mainPanel(
                   conditionalPanel(
                     condition = "input.showTable2 != 'Table'",
+<<<<<<< HEAD
                     box(  width = NULL, plotlyOutput("weights_plot",height="500px"), collapsible = TRUE,
                           title = "Plot", status = "primary", solidHeader = TRUE)
                     # plotOutput("weights_plot")
+=======
+                    plotOutput("weights_plot")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                   ),
                   
                   
                   conditionalPanel(
                     condition = "input.showTable2 != 'Chart'",
+<<<<<<< HEAD
                     box(  width = NULL, DTOutput("weights_tbl",height="500px"), collapsible = TRUE,
                           title = "Table", status = "primary", solidHeader = TRUE)
                     # DTOutput("weights_tbl")
+=======
+                    DTOutput("weights_tbl")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                   )
                   
                 )
@@ -141,7 +179,11 @@ body <- dashboardBody(
     tabItem(tabName = "about",
             img(src="images/amigos.jpg", width=500),
             fluidPage(titlePanel("Authors:"), 
+<<<<<<< HEAD
                       mainPanel(p(h4("- Atai Akunov / atai.akunov@gmail.com")), p(h4("- Liam Peet-Pare / l.peetpare@gmail.com")), p(h4("- Manolo Malaver-Vojvodic / mmala027@uottawa.ca"))))
+=======
+                      mainPanel(p(h4("Atai Akunov")), p(h4("Liam Peet-Pare")), p(h4("Manolo Malaver-Vojvodic"))))
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
     ),
     tabItem(tabName = 'plot',
            fluidPage(
@@ -155,21 +197,50 @@ body <- dashboardBody(
                  uiOutput("item"),
                  uiOutput("date"),
                  uiOutput("geo"),
+<<<<<<< HEAD
                  
                  selectInput("graphType", "Type of Chart:",
                              choices = list("Line Chart", 
+=======
+                 # selectInput("item","CPI Item(s)",
+                 #             choices = unique(df$Item),
+                 #             multiple = TRUE,
+                 #             selected = 'Meat'
+                 # ),
+                 
+                 
+                 # THIS GIVES YOU REACTIVE UI
+                 #numericInput("num", "Maximum slider value", 5),
+                 #uiOutput("hierarchy"),
+                 
+                 # selectInput("geo","Region(s):",
+                 #             choices = unique(df$Region),
+                 #             multiple=TRUE,
+                 #             selected = 'Canada'),
+                 selectInput("graphType", "Type of Chart:",
+                             choices = list("Line Chart", "Bar Chart",
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                                             "Scatter Plot"),
                              selected = "Line Chart"),
                  selectInput("showTable", "Show Data As:",
                              choices = list("Chart", "Table", "Both"),
                              selected = "No"),
+<<<<<<< HEAD
                 
+=======
+                 # sliderInput("date",
+                 #             label = "Select a range of years:",
+                 #             min = min(df$t),
+                 #             max = max(df$t),
+                 #             value = c(min(df$t), max(df$t))),
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                  downloadButton('export', 'Download')
                           ),
                
                mainPanel(
                  conditionalPanel(
                    condition = "input.showTable != 'Table'",
+<<<<<<< HEAD
                    box(  width = NULL, plotlyOutput("lineChart",height="500px"), collapsible = TRUE,
                          title = "Plot", status = "primary", solidHeader = TRUE)
                    #plotlyOutput("lineChart", height = 580)
@@ -179,6 +250,13 @@ body <- dashboardBody(
                    box(  width = NULL, DTOutput("tbl",height="500px"), collapsible = TRUE,
                          title = "Table", status = "primary", solidHeader = TRUE)
                    #DTOutput("tbl")
+=======
+                   plotOutput("lineChart")
+                 ),
+                 conditionalPanel(
+                   condition = "input.showTable != 'Chart'",
+                   DTOutput("tbl")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
                  )
                )
              )

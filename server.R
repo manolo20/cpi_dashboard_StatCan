@@ -1,4 +1,5 @@
 library(shinydashboard)
+<<<<<<< HEAD
 library(dplyr)
 library(DT)
 #library(openxlsx)
@@ -6,6 +7,13 @@ library(plotly)
 library(ggplot2)
 
 setwd("/home/atai/Downloads/CPI dashboard/CPI")
+=======
+library(tidyverse)
+library(DT)
+library(openxlsx)
+
+setwd("/home/atai/Downloads/CPI dashboard/Prototype_1")
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
 #datafiles <- readRDS("./data/choices.rda")
 datafiles <- readRDS("./data/choices.RDS")
 cpi <- readRDS('./data/cpi.RDS')
@@ -78,6 +86,7 @@ weights <- readRDS("./data/weights.RDS")
    })
    
    #WEIGHTS
+<<<<<<< HEAD
    output$weights_plot <- renderPlotly({
      df <- weights %>% filter(Region %in% input$geo2,Item == input$item2)
      
@@ -95,6 +104,20 @@ weights <- readRDS("./data/weights.RDS")
    
    output$weights_tbl <- renderDT({
      df <- weights %>% filter(Region %in% input$geo2,Item == input$item2)
+=======
+   output$weights_plot <- renderPlot({
+     df <- weights %>% filter(geo %in% input$geo2,item == input$item2)
+     
+     graph <- ggplot(data = df, aes(y = value, x = geo)) + 
+       geom_col(aes(fill = geo), size = 1, alpha = 0.75) + 
+       theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = .5))
+     
+     print(graph)
+   })
+   
+   output$weights_tbl <- renderDT({
+     df <- weights %>% filter(geo %in% input$geo2,item == input$item2)
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
      
    })
    
@@ -105,12 +128,26 @@ weights <- readRDS("./data/weights.RDS")
     temp <- datafiles[[as.numeric(input$dataset)]]
   })
   
+<<<<<<< HEAD
 
+=======
+  
+  output$date <- renderUI({
+    sliderInput("date", "Select a date range:", min = min(outVar()$Date),
+                max = max(outVar()$Date),
+                value = c(min(outVar()$Date), max(outVar()$Date)))
+  })
+  
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
   output$item <- renderUI({
     selectInput("item","CPI Item(s):",
                 choices = unique(outVar()$Item),
                 multiple = TRUE,
+<<<<<<< HEAD
                 selected = 'All-items'
+=======
+                selected = 'Meat'
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
     )
   })
   
@@ -120,6 +157,7 @@ weights <- readRDS("./data/weights.RDS")
                 selected = 'CAN')
   })
     
+<<<<<<< HEAD
   filters1 <- reactive({
     check <- outVar() %>%
       filter(Region %in% input$geo,
@@ -142,11 +180,24 @@ weights <- readRDS("./data/weights.RDS")
     } 
     check <- filters1() %>%
       filter(Date >= input$date[1],
+=======
+  filtered <- reactive({
+     if (is.null(input$date)) {
+       return(NULL)
+     } 
+    check <- outVar() %>%
+      filter(Region %in% input$geo,
+             Item %in% input$item,
+             Date >= input$date[1],
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
              Date <= input$date[2]
       )
   })
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
   output$tbl <- renderDT({
     filtered()
   })
@@ -159,6 +210,7 @@ weights <- readRDS("./data/weights.RDS")
         write.xlsx(filtered(), con)
     })
     
+<<<<<<< HEAD
   output$lineChart <- renderPlotly({
     if (is.null(filtered())) {
       return()
@@ -198,6 +250,57 @@ weights <- readRDS("./data/weights.RDS")
     }
     graph <- ggplotly(graph)
     return(graph)
+=======
+  output$lineChart <- renderPlot({
+    if (is.null(filtered())) {
+      return()
+    }
+    
+    df <- filtered()
+    
+    if (input$graphType == "Line Chart") {
+      graph <- ggplot(data=df,
+                      aes( y=Value, x=Date))
+      graph <- graph + geom_line(aes(colour = Region:Item), 
+                                 size=1,alpha=.75) +
+        ggtitle("Placeholder") +
+        theme(text = element_text(size = 16, face = "bold"),
+              plot.title = element_text(hjust = 0.5,
+                                        size = 24,
+                                        face = "bold")) +
+              #legend.position = "bottom") +
+        xlab("Date") + 
+        ylab("Inflation Rate") + theme(plot.background = element_rect(fill = "#ebf9f6"))
+
+
+    } else if (input$graphType == "Bar Chart") {
+      graph <- ggplot(data=df,
+                      aes( y=Value, x=Date))
+      graph <- graph + geom_col(aes(fill = Region:Item),
+                                size=1,alpha=.75,
+                                position = "dodge") +
+        ggtitle("Placeholder") +
+        theme(text = element_text(size = 16, face = "bold"),
+              plot.title = element_text(hjust = 0.5,
+                                        size = 24,
+                                        face = "bold")) +
+        xlab("Date") +
+        ylab("Inflation Rate")
+    } else {
+      graph <- ggplot(data=df,
+                      aes( y=Value, x=Date))
+      graph <- graph + geom_point(aes(colour = Region:Item), 
+                                  size=1,alpha=.75) +
+        ggtitle("Placeholder") +
+        theme(text = element_text(size = 16, face = "bold"),
+              plot.title = element_text(hjust = 0.5,
+                                        size = 24,
+                                        face = "bold")) +
+        xlab("Date") +
+        ylab("Inflation Rate")
+    }
+    print(graph)
+>>>>>>> 31ac5cbcfc588ccfa7c67f6a01ec476bc614f6ba
   })
   
 
