@@ -20,3 +20,19 @@ Special thanks to :clap: *Dragos Ifrim* :clap: for his ongoing leadership and su
 
 <br><br>
 It is also worth to acknowledge that the calculator idea was taken from Bank of Canada's [inflation calculator](https://www.bankofcanada.ca/rates/related/inflation-calculator/) and that all the data is publicly avaibalable from the [Statistics Canada](https://www.statcan.gc.ca/eng/start) website.
+
+
+<br><br>
+Our app can be ran from RStudio using the following code:
+
+```
+## Installing missing packages
+pkgs <- c("shiny", "shinydashboard", "dplyr", "DT", "ggplot2", "plotly")
+
+pkgs_needed <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+
+if(length(pkgs_needed)) install.packages(pkgs_needed)
+
+## Run app from Github repo
+shiny::runGitHub('manolo20/cpi_dashboard_StatCan')
+```
