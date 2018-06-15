@@ -136,7 +136,7 @@ body <- dashboardBody(
     tabItem(tabName = "readme",
             withMathJax(),
             img(src="images/banner.png", width=1200),
-            includeMarkdown("./ReadMe.Rmd")
+            includeMarkdown("ReadMe.Rmd")
     ),
     tabItem(tabName = "about",
             img(src="images/amigos.jpg", width=500),
