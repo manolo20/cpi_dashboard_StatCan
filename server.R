@@ -5,11 +5,11 @@ library(DT)
 library(plotly)
 library(ggplot2)
 
-setwd("/home/atai/Documents/github/CPI")
+#setwd("/home/atai/Documents/github/CPI")
 #datafiles <- readRDS("./data/choices.rda")
-datafiles <- readRDS("./data/choices.RDS")
-cpi <- readRDS('./data/cpi.RDS')
-weights <- readRDS("./data/weights.RDS")
+datafiles <- readRDS("data/choices.RDS")
+cpi <- readRDS('data/cpi.RDS')
+weights <- readRDS("data/weights.RDS")
   
  shinyServer(function(input, output) {
   
