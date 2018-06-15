@@ -17,14 +17,14 @@ weights <- readRDS("data/weights.RDS")
    myfunction <- function(x){
      amount <- x %>% filter(Year == input$year1) %>% select(Value) 
      amount2 <- x %>% filter(Year == input$year2) %>% select(Value) 
-     amount3 <- input$num_principal*amount2/amount
+     amount3 <- round(input$num_principal*amount2/amount, 2)
      return(as.character(amount3))
    }
    
    myfun <- function(x){
      amount <- x %>% filter(Year == input$year1) %>% select(Value) 
      amount2 <- x %>% filter(Year == input$year2) %>% select(Value) 
-     amount3 <- input$num_principal*amount2/amount
+     amount3 <- round(input$num_principal*amount2/amount, 2)
      return(as.numeric(amount3))
    }
    
@@ -58,7 +58,7 @@ weights <- readRDS("data/weights.RDS")
    })
    
    output$text_num <- renderText({
-     (myfun(cpi)/input$num_principal*100)-100
+     round((myfun(cpi)/input$num_principal*100)-100,2)
    })
    
    output$text_intrate <- renderText({
@@ -66,7 +66,7 @@ weights <- readRDS("data/weights.RDS")
    })
    
    output$text_time <- renderText({
-     ((as.numeric(year2(cpi))/as.numeric(year1(cpi)))^(1/as.numeric(yeardiff(cpi)))-1)*100
+     round(((as.numeric(year2(cpi))/as.numeric(year1(cpi)))^(1/as.numeric(yeardiff(cpi)))-1)*100, 2)
    })
    
    output$text_int <- renderText({
