@@ -162,7 +162,7 @@ body <- dashboardBody(
                              selected = "Line Chart"),
                  selectInput("showTable", "Show Data As:",
                              choices = list("Chart", "Table", "Both"),
-                             selected = "No"),
+                             selected = "Both"),
                 
                  downloadButton('export', 'Download')
                           ),
