@@ -27,7 +27,7 @@ Our app can be ran from RStudio using the following code:
 
 ```
 ## Installing missing packages
-pkgs <- c("shiny", "shinydashboard", "dplyr", "DT", "ggplot2", "plotly")
+pkgs <- c("shiny", "shinydashboard", "dplyr", "DT", "ggplot2", "plotly", "treemap", "openxlsx")
 
 pkgs_needed <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
 
