@@ -1,3 +1,4 @@
+[![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg?style=social)](https://github.com/manolo20/cpi_dashboard_StatCan/blob/master/LICENSE.md)
 
 # :maple_leaf: :maple_leaf: Canadian Consumer Price Index Dashboard :maple_leaf: :maple_leaf:
 <br><br>
